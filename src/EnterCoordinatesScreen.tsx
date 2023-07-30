@@ -6,7 +6,6 @@ const EnterCoordinatesScreen = ({route, navigation}) => {
   const [latitude, setLatitude] = React.useState('');
   const [longitude, setLongitude] = React.useState('');
 
-  // Function to handle saving latitude and longitude to a mock database
   const handleSave = async () => {
     console.log('Latitude:', latitude);
     console.log('Longitude:', longitude);
@@ -19,7 +18,6 @@ const EnterCoordinatesScreen = ({route, navigation}) => {
     console.log('response', response.json());
   };
 
-  // Function to handle navigation to Screen 3
   const handleNext = () => {
     navigation.navigate('CalculateDistance', {
       profileImageUri,

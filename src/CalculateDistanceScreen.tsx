@@ -1,13 +1,12 @@
 import React from 'react';
 import {View, Text, TextInput, Button, Image} from 'react-native';
 
-// Function to calculate distance between two coordinates (latitude, longitude)
 const calculateDistance = (lat1: number, lon1: number) => {
   const degToRad = (deg: number) => {
     return deg * (Math.PI / 180);
   };
 
-  const earthRadiusKm = 6371; // Earth's radius in kilometers
+  const earthRadiusKm = 6371;
 
   const dLat = degToRad(lat1);
   const dLon = degToRad(lon1);
@@ -32,9 +31,7 @@ const CalculateDistanceScreen = ({navigation, route}) => {
   const [distance, setDistance] = React.useState('');
   console.log('longitude', longitude);
 
-  // Function to handle distance calculation
   const handleCalculate = () => {
-    // Convert latitude and longitude to numbers and call the calculateDistance function
     const lat1 = parseFloat(latitude);
     const lon1 = parseFloat(longitude);
 
